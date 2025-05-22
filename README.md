@@ -1,9 +1,4 @@
-# cmml_ica2
-Based on the contents of the GitHub repository [liyicheng215/cmml\_ica2](https://github.com/liyicheng215/cmml_ica2) and our previous discussions, here's a comprehensive `README.md` file tailored for your project:
-
----
-
-# CMML-ICA2: Benchmarking Automated Cell Annotation Methods in Single-Cell RNA-seq Analysis
+# CMML-ICA2: Comparative Evaluation of scPred, SingleR, and scANVI for Single-Cell Annotation
 
 ## Overview
 
@@ -13,11 +8,11 @@ The study assesses each method's performance in terms of accuracy, F1 score, com
 
 ## Repository Structure
 
-* **`data_process/`**: Scripts for data preprocessing, including normalization and feature selection.
+* **`data_process/`**: Scripts for data preprocessing and change.
 * **`run_model/`**: Implementation of training and prediction pipelines for each annotation method.
 * **`result_csv/`**: Generated prediction labels and corresponding ground truth for evaluation.
 * **`visualization/`**: Scripts for generating performance metrics visualizations, such as bar plots and confusion matrices.
-* **`requirement.txt`**: List of Python dependencies required to run the analysis.
+* **`requirement.txt`**: List of Python and R dependencies required to run the analysis.
 * **`README.md`**: Project documentation and usage guidelines.
 
 ## Installation
@@ -29,23 +24,14 @@ The study assesses each method's performance in terms of accuracy, F1 score, com
    cd cmml_ica2
    ```
 
+2. **Set up the Python environment according to `requirement.txt`**
 
-
-2. **Set up the Python environment:**
-
-   ```bash
-   pip install -r requirement.txt
-   ```
-
-
-
-*Note: Ensure you have Python 3.8 or higher installed.*
 
 ## Usage
 
 ### Data Preprocessing
 
-Navigate to the `data_process/` directory and execute the preprocessing scripts to prepare the datasets for analysis. This includes normalization, selection of highly variable genes (HVGs), and formatting data structures compatible with each annotation method.
+Navigate to the `data_process/` directory and execute the preprocessing scripts to prepare the datasets for analysis. 
 
 ### Model Training and Prediction
 
@@ -55,7 +41,7 @@ In the `run_model/` directory, you'll find separate scripts for each annotation 
 * **SingleR**: Employs correlation-based matching against reference datasets.
 * **scANVI**: Leverages a semi-supervised variational autoencoder framework for label transfer.
 
-Each script is configured to handle both cross-dataset and in-dataset evaluation scenarios.
+Script is configured to handle cross-dataset and in-dataset evaluation scenarios.
 
 ### Evaluation and Visualization
 
